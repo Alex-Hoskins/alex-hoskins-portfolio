@@ -21,15 +21,15 @@ h2 {
 p {
   font-size: 16px;
 }
-a {
-  border-bottom: 1px solid white;
-  color: #0076ff;
+.navigation a {
+  color: white;
   cursor: pointer;
   text-decoration: none;
   transition: all 0.2s ease;
 }
-a:hover {
-  border-bottom: 1px solid #0076ff;
+.navigation a:hover {
+  border-bottom: 1px solid #ffd000;
+  padding-bottom:5px;
 }
 code,
 pre {
@@ -41,4 +41,7 @@ pre {
 code:before,
 code:after {
   content: '\`';
+}
+.app{
+  width:100%;
 }
