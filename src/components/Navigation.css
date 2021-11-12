@@ -4,7 +4,16 @@
     display:flex;
     justify-content:space-between;
     background-color:black;
-
+    box-sizing:border-box;
+}
+.navTitle{
+    display:flex;
+    align-items:center;
+}
+.navigation p{
+    color:white;
+    font-size: 1.4rem;
+    margin:0px;
 }
 .nav-box{
     width:400px;
