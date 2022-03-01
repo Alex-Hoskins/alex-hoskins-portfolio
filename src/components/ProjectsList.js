@@ -23,12 +23,20 @@ const underdog_devs = {
     project_url:'https://a.underdogdevs.dev/login',
     project_img:"https://lh3.googleusercontent.com/c7rkiZcisRBebJ6SsCP6_409yggqWtNCHkWRzstnzmumM7wlzlREMWoIIUmg_x8pk77iZOJdZG4hO8VULd4VhFf3N42cFDCx4CYgTbuZ8U2AbR3eNDTv5wFXtDMY7ACoe_9ZvyA06w=w600-h315-p-k"
 }
+const resume = {
+    project_name:'Resume', 
+    project_description:'Check it out!', 
+    project_tech_stack:'You can see my resume',
+    project_url:'https://docs.google.com/document/d/1Kx2bUrhq8zvohd1oYA_4KzqYfW32f7Gyl4KIi71-vsQ/edit?usp=sharing',
+    project_img:"https://lh3.googleusercontent.com/2mfqmJ-GrbABSRw7hXvmWP-nmZJOiIVr6sj8BPfmZVHDX1FKOoGNVbf5cOKzJUtOm0I9ic142ajwKx_9G3Mlw9gTPcFVldAu8tDfx7mlxzt_VG2qcoaTkmo1bY1Aw0oz1MkuOGKT-g=w2400?source=screenshot.guru",
+}
 
 
 const myProjects = [
     underdog_devs,
     workspace,
     african_marketplace,
+    resume
 ]
 
 const ProjectList = (props)=>{

@@ -41,9 +41,17 @@ h3{
     width:70vw;
     background-color:#FFF;
 }
+
 .project img{
     width:400px;
     height:300px;
     object-fit:cover;
     border-radius:10px;
+}
+.projLink {
+    text-decoration: none;
+    color:black;
+}
+.project:hover{
+    background-color: #E1E1E1;
 }
