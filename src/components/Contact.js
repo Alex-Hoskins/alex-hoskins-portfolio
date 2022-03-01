@@ -18,7 +18,6 @@ export default Contact;
 
 const StyledContact=styled.div`
     background-image:url('https://images.squarespace-cdn.com/content/v1/54adce11e4b0b378c6c86a66/1478186291208-7CNB463PUX2XNM805SQ5/San+Francisco_California_city+streets+map+drawing_TurnoftheCenturies_etsy.jpg?format=750w');
-    background-color:black;
     margin-top:5%;
     width:100vw;
     min-height:100vh;
@@ -27,5 +26,7 @@ const StyledContact=styled.div`
     background-position:center;
     display:flex;
     justify-content:center;
+    align-items:center;
+    
 `
 
