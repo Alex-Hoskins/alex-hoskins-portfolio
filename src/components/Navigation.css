@@ -5,6 +5,11 @@
     justify-content:space-between;
     background-color:black;
     box-sizing:border-box;
+    position:fixed;
+    margin-top:0;
+    overflow: hidden;
+    top: 0;
+    z-index: 999;
 }
 .navTitle{
     display:flex;

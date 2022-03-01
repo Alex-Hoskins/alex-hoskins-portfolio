@@ -9,7 +9,7 @@ const Navigation = () =>{
             <div className='nav-box'>
                 <Link className='links' to='/'><span>Home</span></Link>
                 <Link className='links' to='/projects'><span>Projects</span></Link>
-                <Link className='links' to='/'><span>Contact</span></Link>
+                <Link className='links' to='/contact'><span>Contact</span></Link>
             </div>
             <div className='navTitle'>
                 <p>{title}</p>

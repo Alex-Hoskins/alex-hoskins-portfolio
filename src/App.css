@@ -28,7 +28,7 @@ p {
   transition: all 0.2s ease;
 }
 .navigation a:hover {
-  border-bottom: 1px solid #ffd000;
+  border-bottom: 1px solid #FC6D6D;
   padding-bottom:5px;
 }
 code,
