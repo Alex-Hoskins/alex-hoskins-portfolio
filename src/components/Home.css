@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 .homeImg img{
       object-fit: cover;
       border-radius:50%;
@@ -13,6 +18,7 @@
     margin-top:80px;
     margin-bottom:0;
     padding-bottom:0;
+    min-height:110vh;
 }
 .home h2{
     font-size: 2.5rem;  
@@ -28,15 +34,8 @@
     
 }
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
 body{
   display: flex;
-  min-height: 100vh;
   background: #FFF;
 }
 .wrapper{

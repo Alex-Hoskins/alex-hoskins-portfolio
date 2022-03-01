@@ -29,10 +29,11 @@ const AboutStyle = styled.div`
     background-color: #343F4F;;
     padding-left:20%;
     padding-right:20%;
+    min-height:100vh;
     h2{
         font-family: 'Poppins';
         font-size:2rem;
-        color:#FFF;
+        color:#FC6D6D;
         text-align:center;
         border-bottom:2px solid #343F4F;
         padding-bottom:15px;
