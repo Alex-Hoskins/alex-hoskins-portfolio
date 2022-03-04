@@ -6,7 +6,7 @@
 }
 .project_list{
     display:flex;
-    align-items:flex-start;
+    align-items:center;
     justify-content:flex-start;
     flex-direction:column;
     width:80vw;
@@ -38,8 +38,9 @@ h3{
     margin:2%;
     justify-content:space-around;
     align-items:center;
-    width:70vw;
-    background-color:#FFF;
+    width:80vw;
+    background-color:#E1E1E1;
+    box-sizing:border-box;
 }
 
 .project img{
@@ -53,5 +54,33 @@ h3{
     color:black;
 }
 .project:hover{
-    background-color: #E1E1E1;
+    background-color: #FFF;
+}
+
+@media(max-width:1200px){
+    .project{
+        width:90vw;
+        margin-left:0px;
+    }
+    h3{
+        font-size:35px;
+    }
+    .project h4{
+        font-size:15px;
+    }
+}
+@media(max-width:800px){
+    .project{
+       flex-direction:column;
+       margin-top:8%;
+    }
+    .project_left{
+        width:80%;
+    }
+}
+
+@media(max-width:500px){
+    .project img{
+        width:80%;
+    }
 }

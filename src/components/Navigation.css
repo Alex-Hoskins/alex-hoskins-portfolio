@@ -29,4 +29,11 @@
 .links{
     color:white;
 }
-
+@media(max-width:1000px){
+    .navigation p{
+        font-size:.8rem;
+    }
+}
+@media(max-width:500px){
+    
+}

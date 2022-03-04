@@ -45,3 +45,8 @@ code:after {
 .app{
   width:100%;
 }
+@media(max-width:1000px){
+  h2{
+    font-size:30px;
+  }
+}
