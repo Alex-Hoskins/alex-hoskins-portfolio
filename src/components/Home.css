@@ -31,7 +31,6 @@
     object-fit: cover;
     margin:0px;
     padding:0px;
-    
 }
 
 body{
@@ -90,4 +89,17 @@ body{
     left: 0;
   }
   
+}
+@media(max-width:800px){
+  .bridgeImg{
+    width:100%;  
+    display:flex;
+    align-items:flex-start;
+    padding:0px;
+    margin:0px;
+    height:100px;
+  }
+  .home{
+    min-height:auto;
+  }
 }
