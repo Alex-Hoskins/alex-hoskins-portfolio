@@ -1,8 +1,12 @@
-https://alexrhoskins.com/projects
+# Alex Hoskins Portfolio
 
-# React Example
+This directory is a web application built to showcase Alex Hoskins' work. You will find an about me, contact, and projects section. The application was created with React.
 
-This directory is a brief example of a [React](https://reactjs.org/) app with [Serverless Functions](https://vercel.com/docs/v2/serverless-functions/introduction) that can be deployed with Vercel and zero configuration.
+## Deployed Project
+
+The application is deployed using Vercel and can be viewed by clicking the link below.
+
+Live Example: https://alexrhoskins.com/projects
 
 ## Deploy Your Own
 
