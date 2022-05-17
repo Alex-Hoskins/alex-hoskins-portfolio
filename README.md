@@ -4,7 +4,7 @@ This directory is a web application built to showcase Alex Hoskins' work. You wi
 
 #### Link to project: https://workspace-zeta.vercel.app/
 <br/>
-<a href='https://workspace-zeta.vercel.app/' target='_blank'><img src='https://lh3.googleusercontent.com/JLyLl0gMfixeVgTzWgQvLsQGQHtUiRIWeoYXx71Lra9zoaLWBL-tLuI08ICiXNfB11GtY2ImLXXPWM_3Pj94izeVnKgqUiSxNsDZHDU_65y5ZjAQBZBl7zgQZiBfLvx4_JNm40qNsg=w600' alt='WorkSpace'/></a>
+<img src='https://lh3.googleusercontent.com/SbdVXSOZoXdQVOCX6VOC_7M6lf137xw9an9nOctRrxyJTDOY8zIcyySHt-sHDuS6AHKUeQuk4vg8-M8q_E6Gd9RSqysgjvSUIDGDkUYBoT8oQlH6y_DkkqplZVsp-zfYguS4Js3BxQ=w600' alt='Hoskins Portfolio'/>
 
 ## How It's Made:
 **Tech used:** React, JavaScript, CSS, HTML
