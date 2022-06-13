@@ -3,6 +3,7 @@
     display:flex;
     justify-content:center;
     background-color:#343F4F;
+    padding-top:20px;
 }
 .project_list{
     display:flex;
@@ -82,5 +83,8 @@ h3{
 @media(max-width:500px){
     .project img{
         width:80%;
+    }
+    .featured_projects{
+        padding-top:150px;
     }
 }

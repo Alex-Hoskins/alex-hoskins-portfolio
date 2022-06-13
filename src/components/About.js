@@ -30,6 +30,10 @@ const AboutStyle = styled.div`
     padding-left:20%;
     padding-right:20%;
     min-height:100vh;
+    @media (max-width: 600px) {
+        padding-left:10%;
+        padding-right:10%;
+    };
     h2{
         font-family: 'Poppins';
         font-size:2rem;

@@ -6,7 +6,10 @@ const Navigation = () =>{
     const title = '<Alex-Hoskins/>'
     return(
         <nav className='navigation'>
-            <div className='nav-box'>
+            <div className='navTitle2'>
+                <p>{title}</p>
+            </div>
+            <div className='nav-box column'>
                 <Link className='links' to='/'><span>Home</span></Link>
                 <Link className='links' to='/projects'><span>Projects</span></Link>
                 {/* <Link className='links' to='/contact'><span>Contact</span></Link> */}
