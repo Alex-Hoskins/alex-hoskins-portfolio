@@ -98,7 +98,7 @@ h1{
 }
 @media(max-width:600px){
   .home{
-    margin-top:200px;
+    margin-top:40px;
   }
   .wrapper{
     display:none;
