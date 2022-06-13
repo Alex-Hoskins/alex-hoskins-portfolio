@@ -3,7 +3,7 @@ import About from './About';
 import './Home.css';
 
 const Home =()=>{
-
+    let title = '<Alex-Hoskins/>'
     return(
        <div className="home">
         <div class="homeImg">
@@ -19,6 +19,7 @@ const Home =()=>{
             <li><span></span></li>
           </ul>
         </div>
+        <h1>{title}</h1>
         <img className='bridgeImg' src="https://lh3.googleusercontent.com/4Vq_EYfeobEke5L_HkQQHza3R5X1oxIgCIfwhoZtt4TbBtSijQ5UJhmnhBuyiad2VBYSfXMgJ19ecT1TT_0f3zaarBIk8a937_87yE33HaGjI-zRv7o4CTBBrfpWyYG9CJ47Td5B=w2400" alt="black bridge" />
         <About/>
        </div>

@@ -5,6 +5,7 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
 .homeImg img{
       object-fit: cover;
       border-radius:50%;
@@ -92,9 +93,19 @@ body{
     left: 0;
   }
 }
+h1{
+  display:none;
+}
 @media(max-width:600px){
   .home{
     margin-top:200px;
+  }
+  .wrapper{
+    display:none;
+  }
+  h1{
+    display:block;
+    color:#FC6D6D;
   }
 }
 

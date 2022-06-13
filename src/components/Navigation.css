@@ -37,7 +37,7 @@
 @media(max-width:600px){
     .navigation{
         flex-direction: column;
-        min-height:180px;
+        min-height:150px;
         align-items:center;
     }
     .navTitle{
@@ -56,7 +56,7 @@
         flex-direction:column;
         justify-content:space-evenly;
         width:100%;
-        height:60px;
+        height:100px;
     }
     .column .links{
         font-size:1.4rem;
