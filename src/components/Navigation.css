@@ -62,6 +62,13 @@
     }
     .column .links{
         font-size:1.4rem;
+        border-bottom:1px solid#FC6D6D;
+        width:100%;
+        text-align:center;
+    }
+    .column .links:hover{
+        font-size:1.6rem;
+        text-decoration:none;
     }
     .nav-box{
         margin:10px;
