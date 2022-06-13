@@ -80,11 +80,11 @@ h3{
     }
 }
 
-@media(max-width:500px){
+@media(max-width:600px){
     .project img{
         width:80%;
     }
     .featured_projects{
-        padding-top:150px;
+        padding-top:0px;
     }
 }

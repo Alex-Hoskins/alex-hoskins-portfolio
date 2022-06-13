@@ -23,11 +23,12 @@ const StyledContact=styled.div`
     min-height:100vh;
     background-size:100vw;
     background-repeat:no-repeat;
-    background-position:center;
+    background-position:top;
     display:flex;
     flex-direction:column;
-    justify-content:center;
+    justify-content:flex-start;
     align-items:center;
+    padding:50px;
     a{
         color:#FC6D6D;
         font-size:3rem;
