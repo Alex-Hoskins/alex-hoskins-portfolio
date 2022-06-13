@@ -37,7 +37,7 @@
 @media(max-width:600px){
     .navigation{
         flex-direction: column;
-        min-height:150px;
+        min-height:180px;
         align-items:center;
     }
     .navTitle{

@@ -6,9 +6,9 @@ const Contact =()=>{
 
     return(
        <StyledContact>
-           <h2>Contact Info</h2>
-            <a href="https://www.linkedin.com/in/alex-hoskins-dev" target='_blank'><img src="https://www.pinclipart.com/picdir/big/574-5743993_linkedin-icon-white-png-clipart.png" width="70" alt="linkedin logo black png" /></a>
-            <a href="https://www.github.com/Alex-Hoskins" target='_blank'><img src="https://www.pinclipart.com/picdir/big/158-1581614_github-clipart.png" width="70" alt="512x512 logo github icon" /></a>
+                <a href="https://www.linkedin.com/in/alex-hoskins-dev" target='_blank'>LinkedIn <img src="https://www.pinclipart.com/picdir/big/574-5743993_linkedin-icon-white-png-clipart.png" width="40" alt="linkedin logo black png" /></a>
+                <a href="https://www.github.com/Alex-Hoskins" target='_blank'>GitHub <img src="https://www.pinclipart.com/picdir/big/158-1581614_github-clipart.png" width="40" alt="512x512 logo github icon" /></a>
+                <a href="mailto:alexrhoskins@gmail.com">Email <img src="https://www.pinclipart.com/picdir/big/341-3417070_00971-56-9357390-in-dringenden-notfllen-00971-50.png" width="40" alt="512x512 logo github icon" /></a>
        </StyledContact>
        
     )
@@ -25,8 +25,29 @@ const StyledContact=styled.div`
     background-repeat:no-repeat;
     background-position:center;
     display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
+    a{
+        color:#FC6D6D;
+        font-size:3rem;
+        font-weight:bolder;
+        text-decoration-color:black;
+        background-color:black;
+        margin:10px;
+        padding-left:10px;
+        padding-right:10px;
+        border-radius:7px;
+        &:hover{
+            font-size:3.2rem;
+        }
+        
+    }
+    h3{
+        color: #FC6D6D;
+        text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+        font-size:1.8rem;
+    }
     
 `
 
