@@ -13,7 +13,7 @@ const About =()=>{
        <AboutStyle>
            <img src="" alt="" />
            <h2>Hello and welcome to my website.</h2>
-           <p>I’m Alex Hoskins, a Full Stack Web Developer formally trained in computer science, software engineering, and web development. I’m currently working with an awesome non-profit called Underdog Devs as a Backend Engineer. I am interested in learning about opportunities where my combined software development skills and specialized communication skills will contribute to team motivation and cloud-native product solutions. Feel free to look around and if you would like to chat, my contact information is at the top of the page.</p>
+           <p>I’m Alex Hoskins, a Full Stack Web Developer formally trained in computer science, software engineering, and web development. Most recently I was working with an awesome non-profit called Underdog Devs as a Backend Engineer. I am interested in learning about opportunities where my combined software development skills and specialized communication skills will contribute to team motivation and cloud-native product solutions. Feel free to look around and if you would like to chat, my contact information is at the top of the page.</p>
            <LanguageDiv>
                <img src="https://www.freepnglogos.com/uploads/html5-logo-png/html5-logo-best-web-design-psd-html-cms-development-ecommerce-6.png" alt="React" width='35%'/>
                <img src="https://camo.githubusercontent.com/8e14ab6f6c4539c74e8ad926ff05173474250c4e/68747470733a2f2f7777772e62617074697374652d646f6e6175782e66722f72656163742d72656475782d636f6e636570742f72656163742d72656475782e706e67" alt="Redux" width='30%' height='auto'/>

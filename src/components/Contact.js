@@ -39,8 +39,18 @@ const StyledContact=styled.div`
         padding-left:10px;
         padding-right:10px;
         border-radius:7px;
+        width:320px;
+        height:80px;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        text-align:center;
+        padding-left:20px;
+        padding-right:20px;
         &:hover{
-            font-size:3.2rem;
+            font-size:3.1rem;
+            text-decoration:underline;
+            text-decoration-color:white;
         }
         
     }
