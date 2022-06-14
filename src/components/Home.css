@@ -57,6 +57,8 @@ body{
 }
 .wrapper{
   display: flex;
+  margin-top:30vh;
+
 }
 .wrapper .static-txt{
   color: #343F4F;
@@ -121,6 +123,7 @@ h1{
   h1{
     display:block;
     color:#FC6D6D;
+    margin-top:10vh;
   }
   .bridgeImg{
     max-height:95px;
