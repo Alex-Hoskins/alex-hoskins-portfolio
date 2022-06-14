@@ -43,6 +43,7 @@ const ProjectList = (props)=>{
     console.log(props)
     return(
         <div className='featured_projects'>
+            <h2>Featured Projects</h2>
             <div className='project_list'>
                 {myProjects.map(proj =>{
                     return <Project project_name={proj.project_name} project_description={proj.project_description} project_tech_stack={proj.project_tech_stack} project_url={proj.project_url} project_img={proj.project_img}/>

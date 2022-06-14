@@ -17,18 +17,17 @@ const Contact =()=>{
 export default Contact;
 
 const StyledContact=styled.div`
-    background-image:url('https://images.squarespace-cdn.com/content/v1/54adce11e4b0b378c6c86a66/1478186291208-7CNB463PUX2XNM805SQ5/San+Francisco_California_city+streets+map+drawing_TurnoftheCenturies_etsy.jpg?format=750w');
-    margin-top:5%;
-    width:100vw;
+    background-image:url('https://images.unsplash.com/photo-1581922819941-6ab31ab79afc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80');
+    min-width:100vw;
     min-height:100vh;
-    background-size:100vw;
+    background-size:cover;
     background-repeat:no-repeat;
     background-position:top;
     display:flex;
     flex-direction:column;
     justify-content:flex-start;
     align-items:center;
-    padding:50px;
+    padding-top:20vh;
     a{
         color:#FC6D6D;
         font-size:3rem;

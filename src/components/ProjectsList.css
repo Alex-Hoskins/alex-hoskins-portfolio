@@ -1,8 +1,10 @@
 .featured_projects{
     width:100vw;
     display:flex;
+    flex-direction:column;
+    align-items:center;
     justify-content:center;
-    background-color:#343F4F;
+    background-color:rgb(246, 246, 246);
     padding-top:20px;
 }
 .project_list{
@@ -22,8 +24,8 @@
     justify-content:space-around;
 }
 h2{
-    font-size: 50px;
-    margin-top:40px;
+    font-size: 2.4rem;
+    margin-top:10vh;
 }
 
 h3{
@@ -34,13 +36,13 @@ h3{
     margin:4%;
     border:1px solid black;
     padding:2%;
-    border-radius:10px;
+    border-radius:7px;
     display:flex;
     margin:2%;
     justify-content:space-around;
     align-items:center;
     width:80vw;
-    background-color:#E1E1E1;
+    background-color:rgb(246, 246, 246);
     box-sizing:border-box;
 }
 
@@ -56,7 +58,9 @@ h3{
 }
 .project:hover{
     background-color: #FFF;
+    border:2px solid black;
 }
+
 
 @media(max-width:1200px){
     .project{
@@ -86,5 +90,8 @@ h3{
     }
     .featured_projects{
         padding-top:0px;
+    }
+    h2{
+        margin-top:5vh;
     }
 }
