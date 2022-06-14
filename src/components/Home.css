@@ -107,6 +107,9 @@ h1{
     display:block;
     color:#FC6D6D;
   }
+  .bridgeImg{
+    max-height:75px;
+  }
 }
 
 
