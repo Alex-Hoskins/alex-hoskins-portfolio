@@ -75,3 +75,32 @@
     }
 }
 
+.navigation.footer-style{
+    position:static;
+    justify-content:space-around;
+    align-items:center;
+    min-height:50px;
+}
+.topScroll{
+    height:30px;
+    background-color:#FC6D6D;
+    border-radius:7px;
+    border:none;
+    padding:5px;
+    font-weight:bold;
+}
+.topScroll:hover{
+    background-color:white;
+}
+
+@media(max-width:600px){
+    .navigation.footer-style{
+      min-height:50px;
+      flex-direction:row;
+      justify-content:space-around;
+    }
+    .navigation.footer-style .nav-box{
+        width:50%;        
+    }
+}
+

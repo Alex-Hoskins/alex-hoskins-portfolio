@@ -15,9 +15,9 @@ const Home =()=>{
           <div class="static-txt"></div>
           <ul class="dynamic-txts">
             <li><span>Developer</span></li>
-            <li><span>Innovator</span></li>
-            <li><span>Designer</span></li>
             <li><span>Leader</span></li>
+            <li><span>Innovator</span></li>
+            <li><span>Engineer</span></li>
             <li><span></span></li>
           </ul>
         </div>

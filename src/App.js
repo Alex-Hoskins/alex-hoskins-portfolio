@@ -6,6 +6,7 @@ import Navigation from './components/Navigation';
 import ProjectList from './components/ProjectsList';
 import Home from './components/Home';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 const App=()=>{
   return (
@@ -18,6 +19,7 @@ const App=()=>{
             <Route exact path="/contact" element={<Contact/>}/>
         </Routes>
       </div>
+      <Footer/>
     </div>
   );
 }
