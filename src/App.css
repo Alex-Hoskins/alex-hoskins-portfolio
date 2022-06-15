@@ -18,6 +18,7 @@ h1 {
 h2 {
   margin-top: 1.5em;
   color:#FC6D6D;
+  border-bottom:2px solid #343F4F;
 }
 p {
   font-size: 16px;

@@ -33,7 +33,7 @@ export default About;
 
 const AboutStyle = styled.div`
     width:100%;
-    background-color: #343F4F;;
+    background-color:rgb(246, 246, 246);
     padding-left:10%;
     padding-right:10%;
     min-height:100vh;
@@ -41,6 +41,7 @@ const AboutStyle = styled.div`
     flex-direction:column;
     align-items:center;
     justify-content:center;
+    border-bottom: 7px double #343F4F;;
     @media (max-width: 600px) {
         padding-left:10%;
         padding-right:10%;
@@ -54,7 +55,7 @@ const AboutStyle = styled.div`
         text-shadow:none;
     }
     p{
-        color:#FFF;
+        color:#343F4F;
         font-size:1.2rem;
     }
     span{

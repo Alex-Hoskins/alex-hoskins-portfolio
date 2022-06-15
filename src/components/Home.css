@@ -12,7 +12,7 @@
       border-radius:50%;
       margin-top:25%;
       position:relative;
-      border:3px solid white;
+      border:3px solid #343F4F;
       margin-bottom:0px;
 } 
 .homeImg{
@@ -23,7 +23,7 @@
 .homeImg h4{
   margin:20px;
   font-size:1.4rem;
-  color:white;
+  color:#343F4F;
 }
 .home{
     display:flex;
