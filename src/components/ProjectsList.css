@@ -58,7 +58,11 @@ h3{
 }
 .project:hover{
     background-color: #FFF;
-    border:2px solid black;
+    border:7px double black;
+}
+h3{
+    color: #FC6D6D;
+        text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
 }
 
 

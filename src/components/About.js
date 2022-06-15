@@ -51,6 +51,7 @@ const AboutStyle = styled.div`
         color:#FC6D6D;
         border-bottom:2px solid #343F4F;
         padding-bottom:15px;
+        text-shadow:none;
     }
     p{
         color:#FFF;
