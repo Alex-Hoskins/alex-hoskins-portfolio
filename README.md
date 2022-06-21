@@ -2,7 +2,7 @@
 
 This directory is a web application built to showcase Alex Hoskins' work. You will find an about me, contact, and projects section. The application was created with React. It was deployed using Vercel and can be viewed by clicking the link below.
 
-#### Link to project: https://workspace-zeta.vercel.app/
+#### Link to project: https://alexrhoskins.com/
 <br/>
 <img src='https://lh3.googleusercontent.com/SbdVXSOZoXdQVOCX6VOC_7M6lf137xw9an9nOctRrxyJTDOY8zIcyySHt-sHDuS6AHKUeQuk4vg8-M8q_E6Gd9RSqysgjvSUIDGDkUYBoT8oQlH6y_DkkqplZVsp-zfYguS4Js3BxQ=w600' alt='Hoskins Portfolio'/>
 
