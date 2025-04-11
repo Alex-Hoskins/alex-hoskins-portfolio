@@ -162,6 +162,13 @@ const ProfileImage = styled.div`
   align-items: center;
   justify-content: center;
   opacity: 0;  // Start as hidden
+  width: 40%; // or adjust this value as needed
+  margin-top: 6rem;
+
+    @media (max-width: 1200px) {
+    width: 100%;
+    margin-top: 3rem;
+    }
 
   &.in-view {
     opacity: 1;

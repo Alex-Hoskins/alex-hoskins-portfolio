@@ -14,6 +14,7 @@ const Home = () => {
   const scoreRef = useRef(score);
   const isResettingRef = useRef(false);
   const [isHit, setIsHit] = useState(false);
+  const [highlightScore, setHighlightScore] = useState(false);
 
   const handleCharacterClick = () => {
     setScore((prevScore) => prevScore + 1);
@@ -37,7 +38,15 @@ const Home = () => {
         const newX = prevX + 1;
         if (newX >= window.innerWidth) {
           // Save high score before score gets reset
-          setHighScore(prev => Math.max(prev, scoreRef.current));
+          
+          setHighScore(prev => {
+            if (scoreRef.current > prev) {
+              setHighlightScore(true); // Trigger highlight
+              setTimeout(() => setHighlightScore(false), 1000); // Remove after 1s
+              return scoreRef.current;
+            }
+            return prev;
+          });
           // Reset position and score IMMEDIATELY
           setScore(0);
           return 0;
@@ -84,7 +93,10 @@ const Home = () => {
         </div>
         <h1>{title}</h1>
         <div className="score-board">
-          Score: <span id="score">{score}</span> | High Score: <span>{highScore}</span>
+          <div className={`scoreboard ${highlightScore ? 'highlight' : ''}`}>
+              High Score: {highScore}
+          </div>
+          Score: <span id="score">{score}</span>
         </div>
         <div className={`flying-character ${isHit ? 'hit' : ''}`} style={{ top: `${yPos}px`, left: `${xPos}px` }} onClick={handleCharacterClick}>
           <div className="character-silhouette" onClick={handleCharacterClick}></div>
