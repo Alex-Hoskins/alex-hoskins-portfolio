@@ -2,7 +2,6 @@ import React from 'react';
 import './ProjectsList.css';
 
 const Project = (props)=>{
-    console.log(props)
     return(
         <a className='projLink' href={props.project_url} target='_blank'>
         <div className='project'>

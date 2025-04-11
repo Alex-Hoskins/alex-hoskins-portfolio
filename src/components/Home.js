@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import About from './About';
 import ProjectList from './ProjectsList';
 import './Home.css';
@@ -9,17 +9,41 @@ const Home = () => {
   const [velocity, setVelocity] = useState(0);
   const [isJumping, setIsJumping] = useState(false);
   const [score, setScore] = useState(0); // <-- Score state added
+  const [highScore, setHighScore] = useState(0);
+  const [xPos, setXPos] = useState(0);
+  const scoreRef = useRef(score);
+  const isResettingRef = useRef(false);
+  const [isHit, setIsHit] = useState(false);
 
   const handleCharacterClick = () => {
     setScore((prevScore) => prevScore + 1);
     setVelocity(-10);
-      // setIsJumping(true);
+    
+    // Trigger flash effect
+    setIsHit(true);
+    setTimeout(() => setIsHit(false), 200); // Remove the class after 200ms
   };
 
   useEffect(() => {
-    let frameCount = 0;
+    scoreRef.current = score;
+  }, [score]);
 
+  useEffect(() => {
+    let frameCount = 0;
+  
     const interval = setInterval(() => {
+      // Update position logic
+      setXPos(prevX => {
+        const newX = prevX + 1;
+        if (newX >= window.innerWidth) {
+          // Save high score before score gets reset
+          setHighScore(prev => Math.max(prev, scoreRef.current));
+          // Reset position and score IMMEDIATELY
+          setScore(0);
+          return 0;
+        }
+        return newX;
+      });
       setYPos((prevY) => {
         const newY = prevY + velocity;
         if (newY >= 300) {
@@ -29,21 +53,21 @@ const Home = () => {
         }
         return newY;
       });
-
-      setVelocity((prevVel) => prevVel + .3);
-
+  
+      setVelocity((prevVel) => prevVel + 0.3);
+  
       // Update score every 10 frames (~0.16s)
       frameCount++;
-      if (frameCount % 10 === 0) {
-        setScore((prevScore) => prevScore + 1);
+      if (!isResettingRef.current && frameCount % 2 === 0) {
+        setScore(prevScore => prevScore + 1);
       }
-    }, 16);
-
-
+    }, 16); // Run the interval every 16ms (~60fps)
+  
     return () => {
       clearInterval(interval);
     };
-  }, [velocity]);
+  }, [velocity]);  // Keep `velocity` as the only dependency to avoid unnecessary rerenders
+  
 
   return (
     <div>
@@ -59,8 +83,10 @@ const Home = () => {
           </ul>
         </div>
         <h1>{title}</h1>
-        <div className="score-board">Score: <span id="score">{score}</span></div>
-        <div className="flying-character" style={{ top: `${yPos}px` }} onClick={handleCharacterClick}>
+        <div className="score-board">
+          Score: <span id="score">{score}</span> | High Score: <span>{highScore}</span>
+        </div>
+        <div className={`flying-character ${isHit ? 'hit' : ''}`} style={{ top: `${yPos}px`, left: `${xPos}px` }} onClick={handleCharacterClick}>
           <div className="character-silhouette" onClick={handleCharacterClick}></div>
         </div>
         <div className="city-silhouette">

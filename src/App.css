@@ -122,3 +122,8 @@ footer {
     align-items: center;
   }
 }
+.flying-character.hit {
+  box-shadow: 0 0 15px 5px red;
+  transform: scale(1.2);
+  transition: all 0.2s ease;
+}

@@ -33,7 +33,6 @@ const myProjects = [
 ]
 
 const ProjectList = (props)=>{
-    console.log(props)
     return(
         <div className='featured_projects'>
             <h2>Featured Projects</h2>

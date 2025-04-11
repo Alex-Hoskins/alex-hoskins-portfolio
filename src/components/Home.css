@@ -231,7 +231,7 @@ h1{
 .flying-character {
   position: absolute;
   bottom: 100px; /* stay above the skyline */
-  left: 0;
+  left: 0px;
   width: 60px;
   height: 60px;
   background-color: #FFD966;
@@ -245,18 +245,9 @@ h1{
   content: "🛸";
   font-size: 50px;
   position: absolute;
-  
 }
 
-/* Left to right motion */
-@keyframes fly-across {
-  0% {
-    left: -50px;
-  }
-  100% {
-    left: 100%;
-  }
-}
+
 
 /* Floating up/down while flying */
 @keyframes float {
@@ -279,7 +270,69 @@ h1{
   font-size: 1.2rem;
 }
 
+@keyframes hitFlash {
+  0% {
+    transform: scale(1) rotate(0deg);
+    box-shadow: 0 0 0px greenyellow;
+    background-color: #FFD966;
+    outline: none;
+    filter: brightness(1);
+  }
+  20% {
+    transform: scale(1.3) rotate(10deg);
+    box-shadow: 0 0 20px 10px green;
+    background-color: green;
+    outline: 4px solid green;
+    outline-offset: 5px;
+    filter: brightness(2);
+  }
+  50% {
+    transform: scale(0.8) rotate(-10deg);
+    box-shadow: 0 0 30px 20px green;
+    background-color: #FFD966;
+    outline: 4px solid green;
+    outline-offset: 5px;
+    filter: brightness(2.5);
+  }
+  80% {
+    transform: scale(1.2) rotate(5deg);
+    box-shadow: 0 0 15px 5px green;
+    background-color: green;
+    outline: 4px solid green;
+    outline-offset: 5px;
+    filter: brightness(1.5);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    box-shadow: 0 0 0px green;
+    background-color: #FFD966;
+    outline: none;
+    outline-offset: 0px;
+    filter: brightness(1);
+  }
+}
+
+/* Apply the animation to flying character directly */
 .flying-character.hit {
-  box-shadow: 0 0 15px 5px #FFD966;
-  transform: scale(1.2);
+  animation: hitFlash 0.5s ease-in-out;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-direction: alternate;
+}
+
+/* Add a "shake" effect for more impact */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.flying-character.hit {
+  animation: hitFlash 0.5s ease-in-out, shake 0.5s ease-out;
+}
+
+.flying-character:hover {
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><text x="0" y="15" font-size="15">👽</text></svg>'), auto;
 }
