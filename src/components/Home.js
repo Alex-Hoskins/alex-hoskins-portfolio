@@ -81,22 +81,23 @@ const Home = () => {
   return (
     <div>
       <div className="home">
-        <div className="wrapper">
-          <div className="static-txt"></div>
-          <ul className="dynamic-txts">
-            <li><span>Developer</span></li>
-            <li><span>Leader</span></li>
-            <li><span>Innovator</span></li>
-            <li><span>Engineer</span></li>
-            <li><span></span></li>
-          </ul>
-        </div>
         <h1>{title}</h1>
-        <div className="score-board">
-          <div className={`scoreboard ${highlightScore ? 'highlight' : ''}`}>
-              High Score: {highScore}
+        <div className="instructions">
+          <div className="score-board">
+            <div className={`scoreboard ${highlightScore ? 'highlight' : ''}`}>
+                High Score: {highScore}
+            </div>
+            Score: <span id="score">{score}</span>
           </div>
-          Score: <span id="score">{score}</span>
+          <div className = "howToPlay">
+            <h2>How to Play</h2>
+            <ul>
+              <li>🛸👽 Click the alien ship to score points.</li>
+              <li>Each click boosts an alien back to its ship!</li>
+              <li>The score resets once the ship flies off screen.</li>
+              <li>Try to beat your high score!</li>
+            </ul>
+          </div>
         </div>
         <div className={`flying-character ${isHit ? 'hit' : ''}`} style={{ top: `${yPos}px`, left: `${xPos}px` }} onClick={handleCharacterClick}>
           <div className="character-silhouette" onClick={handleCharacterClick}></div>

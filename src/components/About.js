@@ -54,12 +54,9 @@ const About = () => {
         </TextContainer>
 
         <ProfileImage ref={profileRef}>
-          <img
-            src="https://lh3.googleusercontent.com/pw/AM-JKLUUOtoXWPYzd-umzXj3jshAZo6G7J5TFRZ3wdh6g7UK8fp5LDCm4jf7zus_fHO9Fhd2FkJAdBFmxOBNqdqC4h6R7id0ej7swxkGCUCEZ9PZOe_6bv10IW9dcDFNZsDNWwmGOigP_FHsx6u8qBbRwGU=w1065-h710-no?authuser=0"
-            alt="Alex Hoskins"
-            width="300"
-          />
+        <img src="/profile_pic.png" alt="Alex Hoskins Profile Pic" />
           <h4>Alex Hoskins</h4>
+          
         </ProfileImage>
       </AboutContainer>
 
@@ -202,7 +199,7 @@ const LanguageDiv = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
-  margin-top: 10%;
+  margin: 10%;
 
   @media (min-width: 800px) {
     width: 50%;

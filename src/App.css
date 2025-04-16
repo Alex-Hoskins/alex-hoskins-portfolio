@@ -103,7 +103,21 @@ footer {
 }
 
 .topScroll {
-  background-color: #FC6D6D;
+  background-color: #FC6D6D; 
+    color: white; /* White text */
+    padding: 6px 12px; /* Padding */
+    font-size: 16px; /* Font size */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to a pointer */
+    text-align: center; /* Center the text */
+    margin-top: 10px; /* Space between button and text above */
+    display: inline-block;
+    text-decoration: none; /* Remove underline from link */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+.topScroll:hover {
+  background-color: #ff4b4b;
 }
 
 /* Responsive tweaks */

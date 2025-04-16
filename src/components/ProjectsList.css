@@ -12,7 +12,7 @@
     align-items:center;
     justify-content:flex-start;
     flex-direction:column;
-    width:80vw;
+    width:100vw;
     min-height:100vh;
     padding:4%;
 }
@@ -41,7 +41,7 @@ h3{
     margin:2%;
     justify-content:space-around;
     align-items:center;
-    width:80vw;
+    width:90vw;
     background-color:rgb(246, 246, 246);
     box-sizing:border-box;
 }
@@ -98,4 +98,24 @@ h3{
     h2{
         margin-top:5vh;
     }
+}
+/* Style the download button */
+.download-button {
+    background-color: #6EB6FF; /* Green background */
+    color: white; /* White text */
+    padding: 12px 24px; /* Padding */
+    font-size: 16px; /* Font size */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to a pointer */
+    text-align: center; /* Center the text */
+    margin-top: 10px; /* Space between button and text above */
+    display: inline-block;
+    text-decoration: none; /* Remove underline from link */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+/* Button hover effect */
+.download-button:hover {
+    background-color: #1486f9; /* Darker green when hovered */
 }
