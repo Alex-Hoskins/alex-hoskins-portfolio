@@ -5,268 +5,180 @@ const About = () => {
     return (
         <AboutContainer>
             <AboutContent>
+                <AboutHeader>
+                    <Eyebrow>About</Eyebrow>
+                    <Title>How I work, and the things I'm building.</Title>
+                </AboutHeader>
 
                 <AboutGrid>
-                    <ProfileSection>
-                        <ProfileImage>
-                            <img src="/profile_pic.png" alt="Alex Hoskins" />
-                        </ProfileImage>
-                        <ProfileInfo>
-                            <Name>Alex Hoskins</Name>
-                            <Role>Full Stack Developer & Software Engineer</Role>
-                            <Location>📍 San Francisco Bay Area</Location>
-                        </ProfileInfo>
-                    </ProfileSection>
-
                     <BioSection>
-                        <SectionTitle>About Me</SectionTitle>
+                        <SectionTitle>Background</SectionTitle>
                         <BioText>
-                            I'm a Full Stack Developer with a strong foundation in both front-end and back-end technologies. 
-                            My experience at Bluecore as a Forward Deployed Engineer has equipped me with deep expertise in 
-                            implementing and optimizing large-scale marketing solutions.
+                            I'm a Senior Solutions Engineer at Cordial. Day-to-day, I work
+                            with enterprise customers on complex marketing platform
+                            implementations — taking unclear requirements and turning them
+                            into shipped software. Before Cordial, I did similar
+                            customer-facing engineering work at Bluecore.
                         </BioText>
                         <BioText>
-                            I'm passionate about creating thoughtful, user-centered applications and thrive in collaborative 
-                            environments where communication, problem-solving, and clean code are highly valued. I'm currently 
-                            exploring opportunities to apply my technical skills and people-first mindset to solve meaningful 
-                            challenges in the tech industry.
+                            On the side, I'm the founder of Leveo, an AI-powered Chrome
+                            extension I think of as a job search command center. It works
+                            across LinkedIn and other job platforms to cut the repetitive
+                            parts out of job hunting. Building it has meant owning the
+                            whole stack — architecture, AI integration, UX, and the
+                            messier go-to-market questions about who it's actually for.
+                        </BioText>
+                        <BioText>
+                            What I care about most is the intersection of technical
+                            execution and user psychology: code that ships, but also
+                            software that fits how real people actually work. The way I
+                            get there has shifted a lot lately — I lean heavily on Claude
+                            Code and modern AI-augmented developer tooling, and on showing
+                            the work as I go (Loom, OBS) instead of saving it for the demo.
                         </BioText>
                     </BioSection>
 
                     <SkillsSection>
-                        <SectionTitle>Technical Expertise</SectionTitle>
+                        <SectionTitle>Toolkit</SectionTitle>
                         <SkillsGrid>
                             <SkillCategory>
-                                <CategoryTitle>Frontend</CategoryTitle>
+                                <CategoryTitle>Languages</CategoryTitle>
                                 <SkillList>
-                                    <Skill>React</Skill>
-                                    <Skill>JavaScript</Skill>
+                                    <Skill>JavaScript (ES6+)</Skill>
+                                    <Skill>TypeScript</Skill>
+                                    <Skill>Python</Skill>
+                                    <Skill>SQL</Skill>
                                     <Skill>HTML5</Skill>
                                     <Skill>CSS3</Skill>
-                                    <Skill>TypeScript</Skill>
                                 </SkillList>
                             </SkillCategory>
 
                             <SkillCategory>
-                                <CategoryTitle>Backend</CategoryTitle>
+                                <CategoryTitle>Frameworks &amp; Libraries</CategoryTitle>
                                 <SkillList>
+                                    <Skill>React.js</Skill>
                                     <Skill>Node.js</Skill>
-                                    <Skill>Python</Skill>
-                                    <Skill>Express</Skill>
-                                    <Skill>SQL</Skill>
-                                    <Skill>MongoDB</Skill>
+                                    <Skill>Vite</Skill>
+                                    <Skill>Chrome Extension APIs</Skill>
                                 </SkillList>
                             </SkillCategory>
 
                             <SkillCategory>
-                                <CategoryTitle>Tools & Others</CategoryTitle>
+                                <CategoryTitle>AI &amp; APIs</CategoryTitle>
+                                <SkillList>
+                                    <Skill>Claude API</Skill>
+                                    <Skill>OpenAI API</Skill>
+                                    <Skill>REST APIs</Skill>
+                                    <Skill>Smarty</Skill>
+                                </SkillList>
+                            </SkillCategory>
+
+                            <SkillCategory>
+                                <CategoryTitle>Data &amp; Infrastructure</CategoryTitle>
+                                <SkillList>
+                                    <Skill>Supabase</Skill>
+                                    <Skill>PostgreSQL</Skill>
+                                    <Skill>BigQuery</Skill>
+                                    <Skill>Datadog</Skill>
+                                </SkillList>
+                            </SkillCategory>
+
+                            <SkillCategory>
+                                <CategoryTitle>Tools</CategoryTitle>
                                 <SkillList>
                                     <Skill>Git</Skill>
-                                    <Skill>AWS</Skill>
-                                    <Skill>Docker</Skill>
-                                    <Skill>REST APIs</Skill>
-                                    <Skill>Agile</Skill>
+                                    <Skill>JSON</Skill>
+                                    <Skill>YAML</Skill>
+                                    <Skill>Jira</Skill>
+                                    <Skill>Confluence</Skill>
+                                    <Skill>Agile / Scrum</Skill>
                                 </SkillList>
                             </SkillCategory>
                         </SkillsGrid>
                     </SkillsSection>
                 </AboutGrid>
-
-                <CallToAction>
-                    <CTAText>Let's Build Something Amazing Together</CTAText>
-                    <CTADescription>
-                        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
-                    </CTADescription>
-                    <CTAButton href="mailto:alexrhoskins@gmail.com">Get in Touch</CTAButton>
-                </CallToAction>
             </AboutContent>
         </AboutContainer>
     );
 };
 
+export default About;
+
 const AboutContainer = styled.div`
-    min-height: 100vh;
-    background: linear-gradient(135deg, #f6f9fc 0%, #edf2f7 100%);
-    padding: 8rem 2rem;
-    display: flex;
-    align-items: center;
+    background: var(--bg);
+    padding: 6rem 2rem;
+    border-top: 1px solid var(--border);
+
+    @media (max-width: 640px) {
+        padding: 4rem 1.25rem;
+    }
 `;
 
 const AboutContent = styled.div`
-    max-width: 1000px;
+    max-width: var(--container);
     margin: 0 auto;
     width: 100%;
 `;
 
 const AboutHeader = styled.div`
-    text-align: center;
-    margin-bottom: 5rem;
-    position: relative;
-
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: -1.5rem;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 60px;
-        height: 4px;
-        background: linear-gradient(135deg, #4299e1 0%, #805ad5 100%);
-        border-radius: 2px;
-    }
+    margin-bottom: 3rem;
 `;
 
-const Title = styled.h1`
-    font-size: 3.5rem;
-    font-weight: 800;
-    color: #2d3748;
-    margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, #4299e1 0%, #805ad5 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: -0.02em;
+const Eyebrow = styled.span`
+    display: inline-block;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.875rem;
 `;
 
-const Subtitle = styled.p`
-    font-size: 1.375rem;
-    color: #4a5568;
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.6;
+const Title = styled.h2`
+    font-size: clamp(1.875rem, 3.5vw, 2.5rem);
+    font-weight: 700;
+    color: var(--text);
+    margin: 0;
+    letter-spacing: -0.025em;
+    line-height: 1.15;
+    max-width: 720px;
 `;
 
 const AboutGrid = styled.div`
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    margin-bottom: 4rem;
-`;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 1.5rem;
 
-const ProfileSection = styled.div`
-    display: flex;
-    align-items: center;
-    gap: 4rem;
-    background: white;
-    padding: 3rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
-
-    &:hover {
-        transform: translateY(-5px);
+    @media (max-width: 900px) {
+        grid-template-columns: 1fr;
     }
-
-    @media (max-width: 768px) {
-        flex-direction: column;
-        text-align: center;
-        gap: 2rem;
-        padding: 2rem;
-    }
-`;
-
-const ProfileImage = styled.div`
-    img {
-        width: 240px;
-        height: 240px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 4px solid #4299e1;
-        padding: 4px;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 12px rgba(66, 153, 225, 0.15);
-
-        &:hover {
-            transform: scale(1.02);
-            box-shadow: 0 8px 16px rgba(66, 153, 225, 0.2);
-        }
-    }
-`;
-
-const ProfileInfo = styled.div`
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 0.75rem;
-`;
-
-const Name = styled.h2`
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #2d3748;
-    margin-bottom: 0.25rem;
-    letter-spacing: -0.01em;
-    position: relative;
-    padding-bottom: 0.75rem;
-
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 40px;
-        height: 3px;
-        background: linear-gradient(135deg, #4299e1 0%, #805ad5 100%);
-        border-radius: 2px;
-    }
-`;
-
-const Role = styled.p`
-    font-size: 1.375rem;
-    color: #4299e1;
-    font-weight: 600;
-    margin: 0;
-    line-height: 1.4;
-`;
-
-const Location = styled.p`
-    font-size: 1.125rem;
-    color: #4a5568;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    margin: 0;
 `;
 
 const BioSection = styled.div`
-    background: white;
-    padding: 3rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    text-align: left;
-`;
+    background: var(--bg-elevated);
+    padding: 2.25rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
 
-const SectionTitle = styled.h3`
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: #2d3748;
-    margin-bottom: 2rem;
-    position: relative;
-    padding-bottom: 1rem;
-    text-align: left;
-
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 40px;
-        height: 3px;
-        background: #4299e1;
-        border-radius: 2px;
+    @media (max-width: 640px) {
+        padding: 1.75rem;
     }
 `;
 
+const SectionTitle = styled.h3`
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin: 0 0 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+`;
+
 const BioText = styled.p`
-    font-size: 1.125rem;
-    color: #4a5568;
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-    text-align: left;
-    max-width: 100%;
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.75;
+    margin: 0 0 1.25rem;
 
     &:last-child {
         margin-bottom: 0;
@@ -274,27 +186,21 @@ const BioText = styled.p`
 `;
 
 const SkillsSection = styled.div`
-    background: white;
-    padding: 2.5rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    background: var(--bg-elevated);
+    padding: 2.25rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    align-self: start;
+
+    @media (max-width: 640px) {
+        padding: 1.75rem;
+    }
 `;
 
 const SkillsGrid = styled.div`
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
-
-    @media (max-width: 768px) {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-    }
-
-    @media (max-width: 480px) {
-        grid-template-columns: 1fr;
-    }
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
 `;
 
 const SkillCategory = styled.div`
@@ -304,23 +210,12 @@ const SkillCategory = styled.div`
 `;
 
 const CategoryTitle = styled.h4`
-    font-size: 1.125rem;
+    font-size: 0.75rem;
     font-weight: 600;
-    color: #4299e1;
-    margin-bottom: 0.5rem;
-    position: relative;
-    padding-bottom: 0.5rem;
-
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 24px;
-        height: 2px;
-        background: #4299e1;
-        border-radius: 2px;
-    }
+    color: var(--text-subtle);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
 `;
 
 const SkillList = styled.div`
@@ -330,79 +225,20 @@ const SkillList = styled.div`
 `;
 
 const Skill = styled.span`
-    background: #edf2f7;
-    color: #2d3748;
-    padding: 0.375rem 0.875rem;
-    border-radius: 16px;
-    font-size: 0.875rem;
+    background: var(--bg-panel);
+    color: var(--text);
+    padding: 0.375rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.8125rem;
     font-weight: 500;
-    transition: all 0.3s ease;
+    border: 1px solid var(--border);
+    transition: border-color var(--transition), color var(--transition),
+        background var(--transition);
+    font-family: var(--font-mono);
 
     &:hover {
-        background: #4299e1;
-        color: white;
-        transform: translateY(-2px);
-        box-shadow: 0 2px 4px rgba(66, 153, 225, 0.2);
+        border-color: var(--accent-border);
+        color: var(--accent);
+        background: var(--accent-soft);
     }
 `;
-
-const CallToAction = styled.div`
-    text-align: center;
-    background: white;
-    padding: 3rem 2rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    max-width: 600px;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 3px;
-        background: linear-gradient(90deg, #4299e1, #805ad5);
-    }
-`;
-
-const CTAText = styled.h3`
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: #2d3748;
-    margin-bottom: 1rem;
-    line-height: 1.4;
-`;
-
-const CTADescription = styled.p`
-    font-size: 1.125rem;
-    color: #4a5568;
-    margin-bottom: 2rem;
-    line-height: 1.6;
-`;
-
-const CTAButton = styled.a`
-    display: inline-block;
-    background: linear-gradient(135deg, #4299e1 0%, #805ad5 100%);
-    color: white;
-    padding: 0.875rem 2rem;
-    border-radius: 8px;
-    font-size: 1.125rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 4px rgba(66, 153, 225, 0.2);
-
-    &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(66, 153, 225, 0.3);
-    }
-
-    &:active {
-        transform: translateY(0);
-    }
-`;
-
-export default About;

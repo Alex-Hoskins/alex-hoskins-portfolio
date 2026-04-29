@@ -1,69 +1,47 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (!element) return;
+    const navHeight = 70;
+    const top = element.getBoundingClientRect().top + window.pageYOffset - navHeight;
+    window.scrollTo({ top, behavior: 'smooth' });
+};
+
 const Footer = () => {
-    const scrollToSection = (sectionId) => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-            const navHeight = 70; // Height of the navigation bar
-            const elementPosition = element.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - navHeight;
-
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-        }
-    };
-
     return (
         <FooterContainer>
             <FooterContent>
                 <FooterTop>
                     <FooterBrand>
                         <BrandName>Alex Hoskins</BrandName>
-                        <BrandTagline>Full Stack Developer & Software Engineer</BrandTagline>
+                        <BrandTagline>Senior Solutions Engineer · Founder of Leveo</BrandTagline>
                     </FooterBrand>
                     <FooterLinks>
                         <LinkGroup>
                             <LinkTitle>Navigation</LinkTitle>
-                            <Link onClick={() => scrollToSection('about')}>About</Link>
-                            <Link onClick={() => scrollToSection('projects')}>Projects</Link>
-                            <Link onClick={() => scrollToSection('contact')}>Contact</Link>
+                            <LinkButton onClick={() => scrollToSection('about')}>About</LinkButton>
+                            <LinkButton onClick={() => scrollToSection('projects')}>Projects</LinkButton>
+                            <LinkButton onClick={() => scrollToSection('contact')}>Contact</LinkButton>
                         </LinkGroup>
                         <LinkGroup>
                             <LinkTitle>Connect</LinkTitle>
-                            <SocialLink 
-                                href="https://www.linkedin.com/in/alex-hoskins" 
-                                target="_blank" 
+                            <SocialLink
+                                href="https://www.linkedin.com/in/alex-hoskins"
+                                target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <SocialIcon>
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                        <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
-                                        <circle cx="4" cy="4" r="2" />
-                                    </svg>
-                                </SocialIcon>
                                 LinkedIn
                             </SocialLink>
-                            <SocialLink 
-                                href="https://www.github.com/Alex-Hoskins" 
-                                target="_blank" 
+                            <SocialLink
+                                href="https://www.github.com/Alex-Hoskins"
+                                target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <SocialIcon>
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
-                                    </svg>
-                                </SocialIcon>
                                 GitHub
                             </SocialLink>
                             <SocialLink href="mailto:alexrhoskins@gmail.com">
-                                <SocialIcon>
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                        <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                    </svg>
-                                </SocialIcon>
                                 Email
                             </SocialLink>
                         </LinkGroup>
@@ -73,11 +51,14 @@ const Footer = () => {
                     <Copyright>
                         © {new Date().getFullYear()} Alex Hoskins. All rights reserved.
                     </Copyright>
-                    <BackToTop href="#" onClick={(e) => {
-                        e.preventDefault();
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
-                    }}>
-                        Back to Top
+                    <BackToTop
+                        href="#"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }}
+                    >
+                        Back to top
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                             <path d="M12 19V5M5 12l7-7 7 7" />
                         </svg>
@@ -88,26 +69,32 @@ const Footer = () => {
     );
 };
 
+export default Footer;
+
 const FooterContainer = styled.footer`
-    background: white;
+    background: var(--bg);
+    border-top: 1px solid var(--border);
     padding: 4rem 2rem 2rem;
-    border-top: 1px solid #e2e8f0;
+
+    @media (max-width: 640px) {
+        padding: 3rem 1.25rem 1.5rem;
+    }
 `;
 
 const FooterContent = styled.div`
-    max-width: 1200px;
+    max-width: var(--container);
     margin: 0 auto;
 `;
 
 const FooterTop = styled.div`
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1.5fr 2fr;
     gap: 4rem;
     margin-bottom: 3rem;
 
     @media (max-width: 768px) {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 2.5rem;
     }
 `;
 
@@ -118,79 +105,71 @@ const FooterBrand = styled.div`
 `;
 
 const BrandName = styled.h2`
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #2d3748;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: -0.01em;
 `;
 
 const BrandTagline = styled.p`
-    font-size: 1rem;
-    color: #4a5568;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    line-height: 1.5;
 `;
 
 const FooterLinks = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+    justify-self: end;
 
     @media (max-width: 768px) {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+        justify-self: start;
+        grid-template-columns: repeat(2, 1fr);
     }
 `;
 
 const LinkGroup = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.625rem;
     align-items: flex-start;
 `;
 
 const LinkTitle = styled.h3`
-    font-size: 1rem;
+    font-size: 0.75rem;
     font-weight: 600;
-    color: #2d3748;
+    color: var(--text-subtle);
     margin-bottom: 0.5rem;
-    width: 100%;
-    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
 `;
 
-const Link = styled.button`
-    color: #4a5568;
-    text-decoration: none;
-    font-size: 0.9375rem;
-    transition: color 0.3s ease;
+const LinkButton = styled.button`
+    color: var(--text-muted);
     background: none;
     border: none;
     padding: 0;
+    font-family: inherit;
+    font-size: 0.9375rem;
     cursor: pointer;
     text-align: left;
-    width: 100%;
+    transition: color var(--transition);
 
     &:hover {
-        color: #4299e1;
+        color: var(--text);
     }
 `;
 
 const SocialLink = styled.a`
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #4a5568;
+    color: var(--text-muted);
     text-decoration: none;
     font-size: 0.9375rem;
-    transition: all 0.3s ease;
+    transition: color var(--transition);
 
     &:hover {
-        color: #4299e1;
-        transform: translateX(4px);
+        color: var(--text);
     }
-`;
-
-const SocialIcon = styled.span`
-    width: 16px;
-    height: 16px;
-    color: currentColor;
 `;
 
 const FooterBottom = styled.div`
@@ -198,39 +177,40 @@ const FooterBottom = styled.div`
     justify-content: space-between;
     align-items: center;
     padding-top: 2rem;
-    border-top: 1px solid #e2e8f0;
+    border-top: 1px solid var(--border);
 
-    @media (max-width: 768px) {
+    @media (max-width: 640px) {
         flex-direction: column;
         gap: 1rem;
-        text-align: center;
     }
 `;
 
 const Copyright = styled.p`
-    font-size: 0.875rem;
-    color: #4a5568;
+    font-size: 0.8125rem;
+    color: var(--text-subtle);
 `;
 
 const BackToTop = styled.a`
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: #4299e1;
+    color: var(--text-muted);
     text-decoration: none;
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: color var(--transition);
 
     svg {
-        width: 16px;
-        height: 16px;
+        width: 14px;
+        height: 14px;
+        transition: transform var(--transition);
     }
 
     &:hover {
-        color: #2b6cb0;
+        color: var(--text);
+    }
+
+    &:hover svg {
         transform: translateY(-2px);
     }
 `;
-
-export default Footer;

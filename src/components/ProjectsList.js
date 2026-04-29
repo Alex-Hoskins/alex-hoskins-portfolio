@@ -2,47 +2,37 @@ import React from 'react';
 import styled from 'styled-components';
 import Project from './Project';
 
+const leveo = {
+    project_name: 'Leveo',
+    project_description: "An AI-powered Chrome extension and command center for the job search. Works across LinkedIn and other job platforms to cut the repetitive parts out of job hunting. Built end-to-end as the founder.",
+    project_tech_stack: 'React · TypeScript · Vite · Claude API · Chrome Extension APIs',
+    project_url: 'https://www.leveo.io/',
+    project_video_id: '-lrQEOS6Zl8',
+    project_youtube_channel: 'https://www.youtube.com/@getLeveo',
+    project_linkedin: 'https://www.linkedin.com/company/the-leveo'
+};
+
 const workspace = {
     project_name: 'WorkSpace',
-    project_description: 'Designed a web app where users can save open office spaces posted by users to meet the office needs of remote workers.',
-    project_tech_stack: 'React | JavaScript | Node | Express | Redux | CSS | HTML',
+    project_description: 'A web app where users can find and save open office spaces — built to meet the office needs of remote workers.',
+    project_tech_stack: 'React · Redux · Node · Express · CSS',
     project_url: 'https://workspace-zeta.vercel.app/',
-    project_img: '/workspace_image.png'
+    project_img: '/workspace_image.jpg'
 };
 
-const levelup = {
-    project_name: 'LevelUp: AI Tools for LinkedIn',
-    project_description: 'A chrome extension that uses AI to help users level up their networking on LinkedIn.',
-    project_tech_stack: 'React | JavaScript | OpenAI API | Chrome Extension API',
-    project_url: 'https://chromewebstore.google.com/detail/levelup-ai-tools-for-link/ioomjennaofikknjjjbnnofkaloknbel',
-    project_img: '/LevelUpHome.png'
-};
-
-const resume = {
-    project_name: 'Resume',
-    project_description: 'Check it out!',
-    project_tech_stack: 'You can see my resume',
-    project_url: 'Alex_Hoskins_Resume.pdf',
-    project_img: "markus-winkler-7iSEHWsxPLw-unsplash.jpg"
-};
-
-const myProjects = [levelup, workspace, resume];
+const myProjects = [leveo, workspace];
 
 const ProjectList = () => {
     return (
         <ProjectsSection>
             <ProjectsContainer>
-                <SectionTitle>Featured Projects</SectionTitle>
+                <SectionHeader>
+                    <Eyebrow>Selected Work</Eyebrow>
+                    <Title>Things I've built.</Title>
+                </SectionHeader>
                 <ProjectsGrid>
                     {myProjects.map((proj, index) => (
-                        <Project
-                            key={index}
-                            project_name={proj.project_name}
-                            project_description={proj.project_description}
-                            project_tech_stack={proj.project_tech_stack}
-                            project_url={proj.project_url}
-                            project_img={proj.project_img}
-                        />
+                        <Project key={index} {...proj} />
                     ))}
                 </ProjectsGrid>
             </ProjectsContainer>
@@ -52,46 +42,48 @@ const ProjectList = () => {
 
 export default ProjectList;
 
-// Styled Components
 const ProjectsSection = styled.section`
-    width: 100vw;
-    min-height: 100vh;
-    background-color: #ffffff;
-    padding: 4rem 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    overflow-x: hidden;
+    background: var(--bg);
+    padding: 6rem 2rem;
+    border-top: 1px solid var(--border);
 
-    @media (max-width: 768px) {
-        padding: 3rem 1rem;
+    @media (max-width: 640px) {
+        padding: 4rem 1.25rem;
     }
 `;
 
 const ProjectsContainer = styled.div`
-    max-width: 1200px;
-    width: 100%;
+    max-width: var(--container);
     margin: 0 auto;
-    padding: 0 1rem;
-    box-sizing: border-box;
+    width: 100%;
 `;
 
-const SectionTitle = styled.h2`
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.5rem;
-    color: #4299e1;
-    border-bottom: 2px solid #e2e8f0;
-    padding-bottom: 1rem;
+const SectionHeader = styled.div`
     margin-bottom: 3rem;
-    text-align: center;
+`;
+
+const Eyebrow = styled.span`
+    display: inline-block;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.875rem;
+`;
+
+const Title = styled.h2`
+    font-size: clamp(1.875rem, 3.5vw, 2.5rem);
+    font-weight: 700;
+    color: var(--text);
+    margin: 0;
+    letter-spacing: -0.025em;
+    line-height: 1.15;
 `;
 
 const ProjectsGrid = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
     width: 100%;
 `;
-

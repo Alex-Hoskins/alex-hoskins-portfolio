@@ -1,144 +1,85 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import About from './About';
 import ProjectList from './ProjectsList';
-import './Home.css';
 import Contact from './Contact';
+import './Home.css';
 
-const Home = () => {
-  const [yPos, setYPos] = useState(100);
-  const [velocity, setVelocity] = useState(0);
-  const [score, setScore] = useState(0);
-  const [highScore, setHighScore] = useState(0);
-  const [xPos, setXPos] = useState(0);
-  const [isHit, setIsHit] = useState(false);
-  const [highlightScore, setHighlightScore] = useState(false);
-  const [showInstructions, setShowInstructions] = useState(false);
-  const scoreRef = useRef(score);
-  const isResettingRef = useRef(false);
-
-  const handleCharacterClick = () => {
-    setScore((prevScore) => prevScore + 1);
-    setVelocity(-10);
-    setIsHit(true);
-    setTimeout(() => setIsHit(false), 200);
-  };
-
-  useEffect(() => {
-    scoreRef.current = score;
-  }, [score]);
-
-  useEffect(() => {
-    let frameCount = 0;
-  
-    const interval = setInterval(() => {
-      setXPos(prevX => {
-        const newX = prevX + 1;
-        if (newX >= window.innerWidth) {
-          setHighScore(prev => {
-            if (scoreRef.current > prev) {
-              setHighlightScore(true);
-              setTimeout(() => setHighlightScore(false), 1000);
-              return scoreRef.current;
-            }
-            return prev;
-          });
-          setScore(0);
-          return 0;
-        }
-        return newX;
-      });
-
-      setYPos((prevY) => {
-        const newY = prevY + velocity;
-        if (newY >= 300) {
-          setVelocity(0);
-          return 300;
-        }
-        return newY;
-      });
-  
-      setVelocity((prevVel) => prevVel + 0.3);
-  
-      frameCount++;
-      if (!isResettingRef.current && frameCount % 2 === 0) {
-        setScore(prevScore => prevScore + 1);
-      }
-    }, 16);
-  
-    return () => clearInterval(interval);
-  }, [velocity]);
-
-  return (
-    <div className="home-container">
-      <section id="about">
-        <About />
-      </section>
-      <section id="projects">
-        <ProjectList />
-      </section>
-      <section id="home" className="hero-section">
-        <div className="game-section">
-          <div className="game-header">
-            <div className="game-info">
-              <h2 className="game-title">Cosmic Voyager</h2>
-              <p className="game-subtitle">Navigate through the stars and test your reflexes</p>
-            </div>
-
-            <div className="score-board">
-              <div className={`score ${highlightScore ? 'highlight' : ''}`}>
-                High Score: {highScore}
-              </div>
-              <div className="current-score">
-                Score: <span>{score}</span>
-              </div>
-            </div>
-
-            <button 
-              className="instructions-toggle"
-              onClick={() => setShowInstructions(!showInstructions)}
-            >
-              {showInstructions ? 'Hide Instructions' : 'Show Instructions'}
-            </button>
-          </div>
-
-          {showInstructions && (
-            <div className="game-instructions">
-              <h3>How to Play</h3>
-              <ul>
-                <li>👾 Click the spaceship to score points</li>
-                <li>🚀 Each click boosts the ship higher</li>
-                <li>🎯 Try to beat your high score!</li>
-              </ul>
-            </div>
-          )}
-
-          <div className="game-container">
-            <div className="stars-container">
-              {[...Array(50)].map((_, i) => (
-                <div key={i} className="star" style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                  animationDelay: `${Math.random() * 3}s`,
-                  animationDuration: `${1 + Math.random() * 2}s`
-                }} />
-              ))}
-            </div>
-            <div 
-              className={`flying-character ${isHit ? 'hit' : ''}`} 
-              style={{ top: `${yPos}px`, left: `${xPos}px` }} 
-              onClick={handleCharacterClick}
-            >
-              <div className="character-silhouette" />
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="contact">
-        <Contact />
-      </section>
-    </div>
-  );
+const scrollToSection = (sectionId) => {
+  const element = document.getElementById(sectionId);
+  if (!element) return;
+  const navHeight = 70;
+  const top = element.getBoundingClientRect().top + window.pageYOffset - navHeight;
+  window.scrollTo({ top, behavior: 'smooth' });
 };
 
-export default Home;
+const Hero = () => (
+  <section id="hero" className="hero-section">
+    <div className="hero-grid">
+      <div className="hero-text">
+        <span className="hero-availability">
+          <span className="hero-availability-dot" />
+          Currently building Leveo
+        </span>
+        <p className="hero-eyebrow">Hi, I'm</p>
+        <h1 className="hero-name">Alex Hoskins</h1>
+        <p className="hero-tagline">
+          Senior Solutions Engineer at Cordial. Founder of Leveo — your
+          AI-powered job search command center.
+        </p>
+        <p className="hero-subtext">
+          I build full-stack software for enterprise customers and ship side
+          projects end-to-end. What I care about most is the seam between solid
+          engineering and how people actually use what you make.
+        </p>
+        <div className="hero-ctas">
+          <button
+            type="button"
+            className="btn btn-primary"
+            onClick={() => scrollToSection('projects')}
+          >
+            View My Work
+          </button>
+          <button
+            type="button"
+            className="btn btn-secondary"
+            onClick={() => scrollToSection('contact')}
+          >
+            Get in Touch
+          </button>
+          <a
+            className="hero-cta-link"
+            href="/Alex_Hoskins_Resume.pdf"
+            download="Alex_Hoskins_Resume.pdf"
+          >
+            Download Resume
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div className="hero-photo-wrap" aria-hidden="true">
+        <div className="hero-photo">
+          <img src="/profile_pic.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+);
 
+const Home = () => (
+  <div className="home-container">
+    <Hero />
+    <section id="about">
+      <About />
+    </section>
+    <section id="projects">
+      <ProjectList />
+    </section>
+    <section id="contact">
+      <Contact />
+    </section>
+  </div>
+);
+
+export default Home;

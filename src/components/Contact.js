@@ -6,176 +6,168 @@ const Contact = () => {
         <ContactContainer>
             <ContactContent>
                 <ContactHeader>
-                    <Title>Get in Touch</Title>
-                    <Subtitle>Let's discuss your next project or opportunity</Subtitle>
+                    <Eyebrow>Contact</Eyebrow>
+                    <Title>Get in touch.</Title>
+                    <Subtitle>
+                        The best ways to reach me.
+                    </Subtitle>
                 </ContactHeader>
 
                 <ContactGrid>
-                    <ContactCard>
-                        <CardIcon>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <ContactCard
+                        href="mailto:alexrhoskins@gmail.com"
+                    >
+                        <CardIconWrap>
+                            <CardIcon viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75">
                                 <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                            </svg>
-                        </CardIcon>
-                        <CardTitle>Email</CardTitle>
-                        <CardContent>
-                            <ContactLink href="mailto:alexrhoskins@gmail.com">
-                                alexrhoskins@gmail.com
-                            </ContactLink>
-                        </CardContent>
+                            </CardIcon>
+                        </CardIconWrap>
+                        <CardLabel>Email</CardLabel>
+                        <CardValue>alexrhoskins@gmail.com</CardValue>
                     </ContactCard>
 
-                    <ContactCard>
-                        <CardIcon>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <ContactCard
+                        href="https://www.linkedin.com/in/alex-hoskins"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <CardIconWrap>
+                            <CardIcon viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75">
                                 <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
                                 <circle cx="4" cy="4" r="2" />
-                            </svg>
-                        </CardIcon>
-                        <CardTitle>LinkedIn</CardTitle>
-                        <CardContent>
-                            <ContactLink 
-                                href="https://www.linkedin.com/in/alex-hoskins" 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                            >
-                                linkedin.com/in/alex-hoskins
-                            </ContactLink>
-                        </CardContent>
+                            </CardIcon>
+                        </CardIconWrap>
+                        <CardLabel>LinkedIn</CardLabel>
+                        <CardValue>linkedin.com/in/alex-hoskins</CardValue>
                     </ContactCard>
 
-                    <ContactCard>
-                        <CardIcon>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <ContactCard
+                        href="https://www.github.com/Alex-Hoskins"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <CardIconWrap>
+                            <CardIcon viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75">
                                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
-                            </svg>
-                        </CardIcon>
-                        <CardTitle>GitHub</CardTitle>
-                        <CardContent>
-                            <ContactLink 
-                                href="https://www.github.com/Alex-Hoskins" 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                            >
-                                github.com/Alex-Hoskins
-                            </ContactLink>
-                        </CardContent>
+                            </CardIcon>
+                        </CardIconWrap>
+                        <CardLabel>GitHub</CardLabel>
+                        <CardValue>github.com/Alex-Hoskins</CardValue>
                     </ContactCard>
                 </ContactGrid>
-
-                <ContactFooter>
-                    <FooterText>
-                        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
-                    </FooterText>
-                </ContactFooter>
             </ContactContent>
         </ContactContainer>
     );
 };
 
-const ContactContainer = styled.div`
-    min-height: 100vh;
-    background: linear-gradient(135deg, #f6f9fc 0%, #edf2f7 100%);
+export default Contact;
+
+const ContactContainer = styled.section`
+    background: var(--bg);
     padding: 6rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border-top: 1px solid var(--border);
+
+    @media (max-width: 640px) {
+        padding: 4rem 1.25rem;
+    }
 `;
 
 const ContactContent = styled.div`
-    max-width: 1200px;
-    width: 100%;
+    max-width: var(--container);
     margin: 0 auto;
 `;
 
 const ContactHeader = styled.div`
-    text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 `;
 
-const Title = styled.h1`
-    font-size: 3rem;
-    font-weight: 800;
-    color: #2d3748;
-    margin-bottom: 1rem;
-    background: linear-gradient(135deg, #4299e1 0%, #805ad5 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+const Eyebrow = styled.span`
+    display: inline-block;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.875rem;
+`;
+
+const Title = styled.h2`
+    font-size: clamp(1.875rem, 3.5vw, 2.5rem);
+    font-weight: 700;
+    color: var(--text);
+    margin: 0 0 1rem;
+    letter-spacing: -0.025em;
+    line-height: 1.15;
 `;
 
 const Subtitle = styled.p`
-    font-size: 1.25rem;
-    color: #4a5568;
-    max-width: 600px;
-    margin: 0 auto;
+    font-size: 1rem;
+    color: var(--text-muted);
+    max-width: 580px;
+    margin: 0;
+    line-height: 1.65;
 `;
 
 const ContactGrid = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-bottom: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
 `;
 
-const ContactCard = styled.div`
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
+const ContactCard = styled.a`
+    background: var(--bg-elevated);
+    padding: 1.75rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    transition: border-color var(--transition), background var(--transition),
+        transform var(--transition);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-
-    &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
-    }
-`;
-
-const CardIcon = styled.div`
-    width: 48px;
-    height: 48px;
-    color: #4299e1;
-    margin-bottom: 1.5rem;
-`;
-
-const CardTitle = styled.h3`
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #2d3748;
-    margin-bottom: 1rem;
-`;
-
-const CardContent = styled.div`
-    font-size: 1rem;
-    color: #4a5568;
-`;
-
-const ContactLink = styled.a`
-    color: #4299e1;
+    gap: 0.5rem;
     text-decoration: none;
-    transition: all 0.3s ease;
-    word-break: break-all;
+    color: inherit;
 
     &:hover {
-        color: #2b6cb0;
-        text-decoration: underline;
+        border-color: var(--accent-border);
+        background: var(--bg-panel);
+        transform: translateY(-2px);
     }
 `;
 
-const ContactFooter = styled.div`
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
+const CardIconWrap = styled.div`
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-md);
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+    transition: background var(--transition);
+
+    ${ContactCard}:hover & {
+        background: var(--accent-soft);
+    }
 `;
 
-const FooterText = styled.p`
-    font-size: 1.125rem;
-    color: #4a5568;
-    line-height: 1.7;
+const CardIcon = styled.svg`
+    width: 18px;
+    height: 18px;
 `;
 
-export default Contact;
+const CardLabel = styled.span`
+    font-size: 0.75rem;
+    color: var(--text-subtle);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+`;
 
+const CardValue = styled.span`
+    font-size: 0.9375rem;
+    color: var(--text);
+    font-family: var(--font-mono);
+    word-break: break-all;
+`;
