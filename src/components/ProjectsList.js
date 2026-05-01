@@ -20,7 +20,15 @@ const waveshare = {
     project_video_src: '/waveshare_demo.mp4'
 };
 
-const myProjects = [leveo, waveshare];
+const buzzcut = {
+    project_name: 'buzz.cut',
+    project_description: "A browser-based timing puzzle where you drop swinging clippers onto a customer's head to shave hair in clean stripes.",
+    project_tech_stack: 'Next.js · TypeScript · HTML5 Canvas',
+    project_url: 'https://buzz-cut-roan.vercel.app/',
+    project_video_src: '/buzzcut_demo.mp4'
+};
+
+const myProjects = [leveo, buzzcut, waveshare];
 
 const ProjectList = () => {
     return (
