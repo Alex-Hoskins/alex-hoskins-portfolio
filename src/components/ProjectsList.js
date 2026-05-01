@@ -12,15 +12,15 @@ const leveo = {
     project_linkedin: 'https://www.linkedin.com/company/the-leveo'
 };
 
-const workspace = {
-    project_name: 'WorkSpace',
-    project_description: 'A web app where users can find and save open office spaces — built to meet the office needs of remote workers.',
-    project_tech_stack: 'React · Redux · Node · Express · CSS',
-    project_url: 'https://workspace-zeta.vercel.app/',
-    project_img: '/workspace_image.jpg'
+const waveshare = {
+    project_name: 'Waveshare Calendar Builder',
+    project_description: 'A Chrome extension for building and exporting weekly visual calendars as BMP images for Waveshare 7.3" 7-color e-paper displays.',
+    project_tech_stack: 'JavaScript · Chrome Extension APIs · Canvas · BMP Encoding',
+    project_github: 'https://github.com/Alex-Hoskins/waveshare-calendar-builder',
+    project_video_src: '/waveshare_demo.mp4'
 };
 
-const myProjects = [leveo, workspace];
+const myProjects = [leveo, waveshare];
 
 const ProjectList = () => {
     return (
