@@ -8,6 +8,7 @@ const leveo = {
     project_tech_stack: 'React · TypeScript · Vite · Claude API · Chrome Extension APIs',
     project_url: 'https://www.leveo.io/',
     project_video_id: '-lrQEOS6Zl8',
+    project_chrome_store: 'https://chromewebstore.google.com/detail/leveo-job-search-command/ioomjennaofikknjjjbnnofkaloknbel',
     project_youtube_channel: 'https://www.youtube.com/@getLeveo',
     project_linkedin: 'https://www.linkedin.com/company/the-leveo'
 };

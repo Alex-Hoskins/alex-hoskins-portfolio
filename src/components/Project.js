@@ -12,6 +12,7 @@ const Project = ({
     project_youtube_channel,
     project_linkedin,
     project_github,
+    project_chrome_store,
 }) => {
     const primary_url = project_url || project_github;
     return (
@@ -65,6 +66,19 @@ const Project = ({
                                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.6.08-1.18.21-1.74L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
                             </SocialIcon>
                             Website
+                        </SocialPill>
+                    )}
+                    {project_chrome_store && (
+                        <SocialPill
+                            href={project_chrome_store}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Chrome Web Store listing"
+                        >
+                            <SocialIcon viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M12 0C7.79 0 4.084 2.17 1.946 5.45l5.04 8.73a5.5 5.5 0 0 1 5.014-7.68h9.587A12 12 0 0 0 12 0zm11.49 6.5h-9.79a5.5 5.5 0 0 1 4.79 8.225L13.7 23.94A12 12 0 0 0 24 12c0-1.94-.46-3.77-1.27-5.4-.42-.06-.83-.1-1.24-.1zM12 7.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zM1.36 6.81A12 12 0 0 0 0 12c0 6.34 4.92 11.53 11.15 11.96l4.85-8.4a5.5 5.5 0 0 1-9.6-.31L1.36 6.81z" />
+                            </SocialIcon>
+                            Chrome Web Store
                         </SocialPill>
                     )}
                     {project_github && (
