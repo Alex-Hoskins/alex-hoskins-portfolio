@@ -10,7 +10,9 @@ const leveo = {
     project_video_id: '-lrQEOS6Zl8',
     project_chrome_store: 'https://chromewebstore.google.com/detail/leveo-job-search-command/ioomjennaofikknjjjbnnofkaloknbel',
     project_youtube_channel: 'https://www.youtube.com/@getLeveo',
-    project_linkedin: 'https://www.linkedin.com/company/the-leveo'
+    project_linkedin: 'https://www.linkedin.com/company/the-leveo',
+    project_instagram: 'https://www.instagram.com/getleveo',
+    project_tiktok: 'https://www.tiktok.com/@getleveo'
 };
 
 const waveshare = {
